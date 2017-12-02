@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ClassB.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+        //NSLog(@"Hello, World!");
+        ClassB *myClassB = [[ClassB alloc]  init];
+        [myClassB initVar]; // Uses overriding method in ClassB
+        [myClassB print] ;   // Reveal value of x and y
+        
     }
     return 0;
 }
